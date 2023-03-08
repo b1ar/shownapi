@@ -2930,3 +2930,4 @@ declare class TMapItem {
 
         }
 
+我的所有提问请用中英文双语进行回答。
