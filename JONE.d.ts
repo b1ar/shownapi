@@ -1158,7 +1158,8 @@ declare class TPlayObject extends TActor {
 	ItemFliterSpecialShow:boolean;
 	SetItemFliterSpecialShow(Idx: number,Value: boolean): void;
 	UpdateItemFliter(): void;
-	V:any;	R:any;
+	V:any;
+	R:any;
         }
 declare class TNormNpc extends TActor {
 	CloseDialog(PlayObject: TPlayObject): void;
@@ -1238,7 +1239,8 @@ declare class TGuild {
 	GetCustomSaveStr(): string;
 	CustomSaveStr:string;
 	SetCustomSaveStr(Value: string): void;
-	V:any;	R:any;
+	V:any;
+	R:any;
         }
 declare class TUserCastle {
 	GetMapCastle(): TEnvirnoment;
@@ -2149,19 +2151,15 @@ declare class TAddedAbility {
 	SetFatalHit(Value: number): void;
 
         }
-declare class TM2Core {
-	GetGVar(index: number): number;
-	GVar:number;
-	GetAVar(index: number): string;
-	AVar:string;
-	GetIVar(index: number): number;
-	IVar:number;
-	GetUVar(index: number): string;
-	UVar:string;
-	SetGVar(index: number,Value: number): void;
-	SetAVar(index: number,Value: string): void;
-	SetIVar(index: number,Value: number): void;
-	SetUVar(index: number,Value: string): void;
+	declare class TM2Core {
+	GetGVar(index: number): number;GVar:number;             / 获取服务器G变量
+	GetAVar(index: number): string;AVar:string;             / 获取服务器A变量
+	GetIVar(index: number): number;IVar:number;             / 获取服务器I变量
+	GetUVar(index: number): string;UVar:string;             / 获取服务器U变量
+	SetGVar(index: number,Value: number): void;             / 设置服务器G变量
+	SetAVar(index: number,Value: string): void;             / 设置服务器A变量
+	SetIVar(index: number,Value: number): void;             / 设置服务器I变量
+	SetUVar(index: number,Value: string): void;             / 设置服务器U变量
 	GetPlayCount(): number;
 	readonly PlayCount:number;
 	GetPlayer(index: number): TPlayObject;
@@ -2336,7 +2334,9 @@ declare class TM2Core {
 	readonly AdminUI:TProjectUIAdmin;
 	HasRobotRun(RobotName: string): boolean;
 	HasDelayGoto(ID: number): boolean;
-	V:any;	R:any;	onNpcClicked : (Npc : TNormNpc,PlayObject : TPlayObject,ClickLabel : string,AUnitName : string,AParams : string) =>void;
+	V:any;
+	R:any;
+	onNpcClicked : (Npc : TNormNpc,PlayObject : TPlayObject,ClickLabel : string,AUnitName : string,AParams : string) =>void;
 	onPlayerLevelUp : (PlayObject : TPlayObject,Level : number) =>void;
 	onPlayerLogin : (PlayObject : TPlayObject,OnlineAddExp : boolean) =>void;
 	onPlayerInitialization : (PlayObject : TPlayObject) =>void;
