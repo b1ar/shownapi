@@ -2151,7 +2151,7 @@ declare class TAddedAbility {
 	SetFatalHit(Value: number): void;
 
         }
-	declare class TM2Core {
+	declare class GameLib {
 	GetGVar(index: number): number;GVar:number;             / 获取服务器G变量
 	GetAVar(index: number): string;AVar:string;             / 获取服务器A变量
 	GetIVar(index: number): number;IVar:number;             / 获取服务器I变量
@@ -2930,5 +2930,3 @@ declare class TMapItem {
 
         }
 
-declare var GameLib : TM2Core; 
- declare var DateUtils : TDateUtils
